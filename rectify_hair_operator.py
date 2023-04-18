@@ -13,7 +13,7 @@ from bpy.types import Operator
 from bpy.utils import register_class, unregister_class
 
 
-import bpy_extras
+from bpy_extras import mesh_utils
 import bmesh
 import math
 
@@ -207,7 +207,7 @@ class UV_ISLAND:
 
 
 def get_island_list(obj,mesh):
-    island_poly_idx_list = bpy_extras.mesh_utils.mesh_linked_uv_islands(mesh)
+    island_poly_idx_list = mesh_utils.mesh_linked_uv_islands(mesh)
 
     # def island
     island_list = []
